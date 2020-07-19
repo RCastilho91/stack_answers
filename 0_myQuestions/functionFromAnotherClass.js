@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
-export default class exitModal {
+export default class ExitModal extends Component {
     constructor(props){
         super(props);
+
+        this.modalAppears = this.modalAppears.bind(this);
+        this.modalDisappears = this.modalDisappears.bind(this);
 
         this.state = {
             visibility: false
@@ -32,5 +35,24 @@ export default class exitModal {
                 </div>
             );
         }
+    }
+}
+
+import ExitModal from './components/ExitModal';
+import logo from './assets/logo.png'
+class UserInterface extends Component {
+    constructor(props) {
+        super(props);
+        this.handleImgClick = this.handleImgClick.bind(this);
+    }
+
+    handleImgClick() {
+        ExitModal.modalAppears();
+    }
+
+    render() {
+        return(
+            <img className="top-left-logo" src={ logo } onClick= { () => this.handleImgClick } />
+        )
     }
 }

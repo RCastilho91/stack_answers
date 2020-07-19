@@ -47,7 +47,8 @@ class UserInterface extends Component {
     }
 
     handleImgClick() {
-        ExitModal.modalAppears();
+        var modalOpener = new ExitModal();
+        modalOpener.modalAppears();
     }
 
     render() {

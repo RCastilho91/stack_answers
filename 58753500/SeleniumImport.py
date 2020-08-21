@@ -14,7 +14,7 @@ dsxclientorder = get(url).content
 soup = BeautifulSoup(dsxclientorder, 'html.parser')
 
 # Setting parameters for selenium to work
-path = r'C:/Users/itsme/Desktop/Util/chromedriver.exe'
+path = r'C:/Users/itsme/Desktop/Util/chromedriver.exe' #make sure you insert the path to your driver here!
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 driver = webdriver.Chrome(path, chrome_options=options)

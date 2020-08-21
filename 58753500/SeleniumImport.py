@@ -10,8 +10,8 @@ source_information = pd.read_csv('my_file.csv',header=None,skiprows=[0])
 
 # setting the URL for BeautifulSoup to operate in
 url = "yourwebform.com"
-dsxclientorder = get(url).content
-soup = BeautifulSoup(dsxclientorder, 'html.parser')
+my_web_form = get(url).content
+soup = BeautifulSoup(my_web_form, 'html.parser')
 
 # Setting parameters for selenium to work
 path = r'C:/Users/itsme/Desktop/Util/chromedriver.exe' #make sure you insert the path to your driver here!
